@@ -1,0 +1,42 @@
+.board-wrapper
+{
+	width: 800px;
+	height: 800px;
+}
+.board
+{
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.board > div
+{
+	display: table-row;
+}
+
+.board > div > div
+{
+	display: table-cell;
+	width: 12%;
+	height: 12%;
+	border: 1px solid white;
+	
+}
+
+.board > div:nth-child(odd) > div:nth-child(odd), .board > div:nth-child(even) > div:nth-child(even) 
+{
+	background-color: #CCCCCC;
+}
+
+.board > div:nth-child(odd) > div:nth-child(even), .board > div:nth-child(even) > div:nth-child(odd) 
+{
+	background-color: black;
+}
+
+.board > div:nth-child(even) > div.selected, .board > div:nth-child(odd) > div.selected
+{
+	background-color: green;
+}
+
+
